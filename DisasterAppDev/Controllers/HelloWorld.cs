@@ -6,7 +6,7 @@ namespace DisasterAppDev.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Hello, World");
+            return View();
         }
     }
 }
