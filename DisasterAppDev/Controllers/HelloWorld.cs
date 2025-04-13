@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using DisasterAppDev.Models;
 
 namespace DisasterAppDev.Controllers
 {
@@ -6,7 +7,13 @@ namespace DisasterAppDev.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = new TestModel
+            {
+                Id = 1,
+                Name = "Test Item",
+                Description = "This is a test description."
+            };
+            return View(model); // Pass the model  to the view
         }
     }
 }
